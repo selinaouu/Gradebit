@@ -1,0 +1,81 @@
+<!--Base template for "task_form" and "task_list"-->
+<!--Ally Tan-->
+{% load static %}
+<!doctype html>
+<html>
+<head>
+<title>Dashboard</title>
+<head>
+    <link href="https://fonts.googleapis.com/css?" rel=stylesheet>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <link href="{% static 'css/base.css' %}" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+</head>
+<body style="background-color: rgba(200, 153, 223, 0.171); ">
+  <header class="mainheader">
+    <img class= "headerlogo" src="{% static 'css/media/logo.png' %}">
+        <h2 class="headertitle">Gradebit</h2>
+        <h3 class="year currenty">
+            <script>
+                var CurrentYear = new Date().getFullYear()
+                document.write(CurrentYear)
+            </script>
+        </h3>
+        <h3 class="year indent">-</h3>
+        <h3 class="year nexty">
+            <script>
+                var CurrentYear = new Date().getFullYear() + 1
+                document.write(CurrentYear)
+            </script>
+        </h3>
+    </header>
+            
+        <div id="navbar">
+            <div id="wrapper">
+                <li class="b"><a class="active" href="{% url 'task_list' %}" style="text-decoration: none; color: white;">Dashboard</a></li>
+                <li class="c"><a  href="{% url 'student_list' %}" style="text-decoration: none; color: white;">Students</a></li>
+                <li class="d"><a  href="{% url 'studentgrades_list' %}" style="text-decoration: none; color: white;">Gradebook</a></li>
+                <li class="e"><a href="{% url 'logout' %}" style="text-decoration: none; color: white;">Sign Out</a></li>
+            </div>
+        </div>
+
+
+    <div class="row no-gutters">
+       <div class="col-sm-5 pt-5" style="position:absolute;top:5vw;left:8vw;font-family:'Raleway', sans-serif;font-weight: bold">
+        {% if user.is_authenticated %}
+        <h1 style="font-size:4vw">Welcome back, {{user.username}}!</h1>
+        {% else %}
+        {% endif %}
+        <br>
+        
+        <h2 style="font-weight: bold"> It is currently: </h2>
+        <h2 style="color:rgb(39, 38, 38);">{% now "jS F Y H:i" %}</h2>
+        <img src="{% static 'css/media/working.png' %}" style="height:23vw; width:33vw;">
+        </div>
+    </div>
+    
+    
+            <div class="jumbotron pt-3" style="position:absolute;left:46vw;width:45vw;background-color: #f8f8f8;top:10vw;">
+                <h1 style="text-align: center;font-family: 'Raleway', sans-serif;font-weight:bold;">My To Do List</h1>
+                <hr class="my-4">
+            <div>
+            </div>
+        {% block content%}
+        {% endblock content%}
+        </div>
+        </div>
+    </div>
+    </div>
+        
+ 
+ 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>

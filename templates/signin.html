@@ -1,0 +1,50 @@
+<!--Signin page-->
+<!--Selina Ou-->
+{% load static %}
+{% load widget_tweaks %}
+<!DOCTYPE html> 
+<html>
+    <head> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?" rel=stylesheet>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;600&display=swap" rel="stylesheet">
+        <title>Sign In</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/signin.css' %}">
+    </head>
+    <body>
+        <div id="app"> 
+        
+            <div id="border">
+                <h1 id="signup" align="center">SIGN IN</h1>
+                
+                <form action="" method="POST">
+                {% csrf_token %}
+
+                    <div class="L1">Username</div>
+                    <input type="text" class="email" align="center" placeholder="Enter Username" name="username" required> 
+        
+                    <div class="L2">Password</div>
+                    <input class="pass" align="center" name="password" type="password">
+                    
+                    {% if messages %}
+                    {% for message in messages %}  
+                        <h3 style="font-size:1vw;font-weight: bold;font-family: 'Raleway', sans-serif; position:absolute;top:21vw;left:15vw;text-align: left;text-align: center;">{{message}}</h3>
+                    {% endfor %}
+                    {% endif %}  
+                    
+                    <input type='submit' id="useraccount"></input>
+                </form>
+    
+                    <div>
+                        <p class="L4"> Don't have an account? </p>
+                        <p class="forgot"><a href="{% url 'signup' %}" style="text-decoration:none;color: inherit;">Sign Up.</a></p>
+                    </div>
+
+            </div>
+            
+            <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+            <script src="https://unpkg.com/vuesax@4.0.1-alpha.25/dist/vuesax.min.js"></script>
+        </body>
+</html>

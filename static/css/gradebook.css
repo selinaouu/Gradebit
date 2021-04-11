@@ -1,0 +1,143 @@
+/* Selina Ou*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;600&display=swap');
+@font-face {
+    font-family: 'Raleway', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;600&display=swap');
+}
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    overflow-y:scroll;
+    background: #e2e3e4;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    overflow-x: hidden;
+    margin:auto;  
+  }
+
+.mainheader{
+    background-color:rgb(200, 153, 223); 
+    position:absolute;
+    top: 0vw;
+    padding: 1.3vw;
+    width: 100vw;
+    overflow:hidden;
+}
+
+  .headerlogo{
+    position:absolute;
+    width:2vw;
+    height:2vw;
+    top:0.3vw;
+  }
+
+  .headertitle{
+    position:absolute;
+    font-weight: 500;
+    font-size:1.4vw;
+    top:0.5vw;
+    left:5vw;
+    color:#fbfcff;
+  }
+
+  .year{
+    position:absolute;
+    font-weight: 500;
+    font-size:1vw;
+    color:#fbfcff;
+  }
+
+  .currenty{
+    top:0.7vw;
+    left:12.5vw;
+  }
+  .indent{
+    top:0.7vw;
+    left:14.6vw;
+  }
+  .nexty{
+    top:0.7vw;
+    left:15.2vw;
+  }
+
+#wrapper{
+  position:absolute;
+  top:2.5vw;
+  overflow: hidden;
+  background-color: #333;
+  width:100vw;
+  height:2.1vw;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 0.42vw;
+    text-decoration: none;
+    width:10vw;
+    position:absolute;
+    top:0.2vw;
+    font-size:0.9vw;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: rgb(203, 157, 221);
+  }
+  
+  .active {
+    background-color: #774caf;
+  }
+
+a:active {
+    text-decoration: none;
+}
+.b{
+  top:-.2vw;
+  left:0vw;
+  position: absolute;
+  list-style-type:none;
+}
+.c{
+  top:-.2vw;
+  left:10vw;
+  position: absolute;
+  list-style-type:none;
+}
+.d{
+  top:-.2vw;
+  left:20vw;
+  position: absolute;
+  list-style-type:none;
+}
+.e{
+  top:-.2vw;
+  left:89.2vw;
+  position: absolute;
+  list-style-type:none;
+}
+.sidebarcontent{
+  height:48vw;
+  width:90vw;
+  background-color: #fbfcff;
+  filter: drop-shadow(0 0 10px  rgb(192, 191, 191));
+  border-radius: 1vw;
+  position:absolute;
+  top:6vw;
+  left:5vw;
+  padding-left:9vw;
+  padding-top:8vw;
+}

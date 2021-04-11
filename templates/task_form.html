@@ -1,0 +1,28 @@
+<!--Page for the form to add tasks-->
+<!--Ally Tan-->
+{%extends "base.html"%}
+{% load crispy_forms_tags %}
+
+{% block content%}
+    <form action="" method="POST" autocomplete="off">
+        {% csrf_token %}
+        {{form.name|as_crispy_field}}
+        <div class="row">
+        <div class="col-md-4">
+            {{form.class_code|as_crispy_field}}
+        </div>
+        <div class="col-md-8">
+            {{form.date|as_crispy_field}}
+        </div>
+        <div class="row m-2" >
+        <div class="col-md-5">
+            <button type="submit" class="btn btn-success btn-block btn-lg">Submit </button>
+        </div>
+        <div class="col-md-7">
+            <a href="{% url 'task_list'%}" class="btn btn-secondary btn-block btn-lg">
+                Back to List
+            </a>
+        </div>
+
+    </form>
+{% endblock content%}

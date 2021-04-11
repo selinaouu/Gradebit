@@ -1,0 +1,42 @@
+<!--Page for the list of tasks-->
+<!--Ally Tan-->
+{%extends "base.html"%}
+
+{% block content%}
+
+<table class="table table-hover text-center table-borderless table-striped">
+    <thead class="border-bottom font-weight-bold">
+    <tr>
+        <td style="font-size: 1.1vw">Class</td>
+        <td style="font-size: 1.1vw">Task Name</td>
+        <td style="font-size: 1.1vw">Date</td>
+        <td style="font-size: 1vw">
+            <a href="{% url 'task_form' %}" class="btn btn-outline-success">
+                <i>+ Add New</i></a></td>
+        </tr>
+        </thead>
+    <tbody>
+        {%for task in users %}
+        <tr>
+         <td>{{task.class_code}}</td>
+        <td>{{task.name}}</td>
+        <td>{{task.date}}</td>
+        <td>
+            <a href="{% url 'task_update' task.id %}"  class="btn btn-outline-primary" >
+                Edit
+            </a>
+           </td>
+           <td>
+            <form action="{% url 'task_delete' task.id%}" method="post" class="inline">
+            {% csrf_token %}
+                <button type="submit" class="btn btn-outline-danger">
+                  Delete
+               </button>
+            </form>
+        </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock content%}

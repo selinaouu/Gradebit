@@ -1,0 +1,53 @@
+<!--Sign Up Page-->
+<!--Selina Ou-->
+{% load static  %}
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?" rel=stylesheet>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;600&display=swap" rel="stylesheet">
+    <link href= "signin.html">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <title>Sign In</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/signup.css' %}">
+</head>
+
+<body>
+<div id= "mpage">
+    <div id="border">
+        <h1 id="signup" align="center">SIGN UP</h1>
+    
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="L3">Username</div>
+            <input class="firstname" align="center" type="text" name="username" >
+            <div class="L1">Email</div>
+            <input type="text" class="email" align="center" placeholder="person123@gmail.com" name="email" required> 
+            <div class="L4">Password</div>
+            <input class="lastname" align="center" name="password1" type="password">
+            <div class="L2">Password Verification</div>
+            <input type="password"  align="center" class= "pass" placeholder="Repeat Password" name="password2" required>
+
+            {% if messages %}
+                    {% for message in messages %}  
+                        <h3 style="font-size:1vw;font-weight: bold;font-family: 'Raleway', sans-serif; position:absolute;top:30vw;left:14vw;text-align: left;text-align: center;">{{message}}</h3>
+                    {% endfor %}
+            {% endif %}  
+            <input type="submit" id="useraccount"></input>
+        </form>
+
+
+            <p class="L6">Already have an account?</p>
+            <p class="forgot"><a href="{% url 'signin' %}" style="text-decoration:none;color: inherit;">Sign In. </a></p>
+            </div>
+
+        </div>
+
+    </div>
+   
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vuesax@4.0.1-alpha.25/dist/vuesax.min.js"></script>
+</body>
+</html>

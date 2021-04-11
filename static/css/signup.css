@@ -1,0 +1,244 @@
+/* Ally Tan*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;600&display=swap');
+@font-face {
+    font-family: 'Raleway', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;600&display=swap');
+ 
+  }
+  body{
+    overflow-y:auto;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 1vw;
+    display: flex;
+    background: linear-gradient(to top, #b4bfe9 0%, #cbeff8 100%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+  }
+  #mpage {
+    min-height:55vw;
+    min-width:100vw;
+    max-width:900vw;
+    max-height:900vw;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+
+  #border{
+    height: 55vw;
+    width: 40vw;
+    background-color: white;
+    filter: drop-shadow(0 0 10px  rgb(192, 191, 191));
+    border-radius: 3vw;
+    margin-top:1vw;
+    margin-left: 30vw;
+    margin-right: auto;
+  }
+  #signup{
+    font-family: 'Raleway', sans-serif;
+    font-size: 3vw;
+    position:absolute;
+    top: 5vw;
+    left:13.5vw;
+  }
+
+.forgot {
+    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+    font-weight:200;
+    font-size: 3vw;
+    font-family: 'Raleway', sans-serif;
+    padding-left:17vw;
+    padding-top: 0vw;
+    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+    color: #670694;
+    text-decoration: none;
+    font-size: 1vw;
+    font-weight: bold;
+    cursor: pointer;
+    position:absolute;
+    top:47vw;
+    left:1.5vw;
+}
+.forgot:hover{
+  cursor: pointer;
+}
+.email {
+  width: 32vw;
+  background-color: rgba(199, 199, 201, 0.178);
+  font-weight: 200;
+  font-size: 0.7vw;
+  letter-spacing: 0.1vw;
+  padding: 0.6vw 1vw;
+  border-radius: 1.1vw;
+  outline: none;
+  border: 0.1vw solid rgba(0, 0, 0, 0.02);
+  position:absolute;
+  top:12.5vw;
+  left:3.2vw;
+}
+
+.email:focus{
+  border: 0.2vw solid rgba(0, 0, 0, 0.02);
+}
+
+.firstname {
+  width: 32vw;
+  background-color: rgba(199, 199, 201, 0.178);
+  font-weight: 200;
+  font-size: 0.7vw;
+  letter-spacing: 0.1vw;
+  padding: 0.6vw 1vw;
+  border-radius: 1.1vw;
+  outline: none;
+  border: 0.1vw solid rgba(0, 0, 0, 0.02);
+  position:absolute;
+  top:17.5vw;
+  right:2.5vw;
+}
+
+.firstname:focus{
+  border: 0.2vw solid rgba(0, 0, 0, 0.02);
+}
+
+.lastname {
+  width: 32vw;
+  background-color: rgba(199, 199, 201, 0.178);
+  font-weight: 200;
+  font-size: 0.7vw;
+  letter-spacing: 0.1vw;
+  padding: 0.6vw 1vw;
+  border-radius: 1.1vw;
+  outline: none;
+  border: 0.1vw solid rgba(0, 0, 0, 0.02);
+  position:absolute;
+  top:22.5vw;
+  right:2.5vw;
+}
+
+.lastname:focus{
+  border: 0.2vw solid rgba(0, 0, 0, 0.02);
+}
+.pass{
+  width: 32vw;
+  background-color: rgba(199, 199, 201, 0.178);
+  font-weight: 200;
+  font-size: 0.7vw;
+  letter-spacing: 0.1vw;
+  padding: 0.6vw 1vw;
+  border-radius: 1.1vw;
+  outline: none;
+  border: 0.1vw solid rgba(0, 0, 0, 0.02);
+  position:absolute;
+  top:27.5vw;
+  right:2.5vw;
+}
+
+.pass:focus{
+  border: 0.2vw solid rgba(0, 0, 0, 0.02);
+}
+
+.rpass{
+  width: 32vw;
+  background-color: rgba(199, 199, 201, 0.178);
+  font-weight: 200;
+  font-size: 0.7vw;
+  letter-spacing: 0.1vw;
+  padding: 0.6vw 1vw;
+  border-radius: 1.1vw;
+  outline: none;
+  border: 0.1vw solid rgba(78, 78, 78, 0.02);
+  position:absolute;
+  top:32.5vw;
+  right:2.5vw;
+}
+.rpass:focus{
+  border: 0.2vw solid rgba(0, 0, 0, 0.02);
+}
+
+.L1{
+  font-size: 0.8vw;
+  font-family: 'Raleway', sans-serif;
+  position:absolute;
+  top: 11.3vw;
+  left:6vw;
+}
+.L2{
+  font-size: 0.8vw;
+  font-family: 'Raleway', sans-serif;
+  position:absolute;
+  top: 26.3vw;
+  left:6vw;
+
+}
+.L3{
+  font-size: 0.8vw;
+  font-family: 'Raleway', sans-serif;
+  padding-top:1vw;
+  margin-left:5.5vw;
+  position:absolute;
+  left:0.5vw;
+  top:15.3vw;
+
+}
+.L4{
+  font-size: 0.8vw;
+  font-family: 'Raleway', sans-serif;
+  margin-top:13vw;
+  margin-left:5.5vw;
+  position:absolute;
+  left:0.5vw;
+  top:8.3vw;
+}
+.L5{
+  font-size: 0.8vw;
+  font-family: 'Raleway', sans-serif;
+  position:absolute;
+  left:6vw;
+  top:31.3vw;
+}
+.L6{
+  font-size: 1vw;
+  font-family:'Raleway', sans-serif;
+  position:absolute;
+  left:14vw;
+  top:45.5vw;
+}
+
+#useraccount{
+  border: none;
+    font-family: 'Raleway', sans-serif;
+    padding: 0.7vw 6vw;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 10vw;
+    outline: none;
+    font-size: 1vw;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    background: rgb(136, 56, 202); 
+    color: rgb(255, 255, 255);
+    justify-self: end;
+    align-self: center;
+    position:absolute;
+    top:38vw;
+    left:12vw;
+}
+
+#useraccount:hover{
+  background: rgb(136, 56, 202);
+    color: rgb(255, 255, 255);
+	  transform: translateY(-3px);
+    box-shadow: 0px 10px 18px rgb(209, 174, 241);
+    font-weight:bold;
+}
+
+.messages{
+  font-family: 'Raleway', sans-serif;
+  font-size:1vw;
+  position:absolute;
+  top:41vw;
+  left:4vw;
+}

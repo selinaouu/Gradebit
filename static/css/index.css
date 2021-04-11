@@ -1,0 +1,583 @@
+/* Stylesheet for index.html */
+/* Selina Ou*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;600&display=swap');
+@font-face {
+    font-family: 'Raleway', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;600&display=swap');
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    overflow-y:scroll;
+    background: #fbfcff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 30px;
+    overflow-x: hidden;
+    margin:auto;  
+  }
+
+  #container{
+    min-height:100vw;
+    min-width:100vw;
+    max-width:900vw;
+    max-height:900vw;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+
+  #trial{
+    width:100vw;
+    height:100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  *
+  {
+    margin: 0vw;
+    padding: 0vw;
+  }
+
+  .titre {
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    position: absolute;
+    left: 33vw;
+    top:17vw;
+    font-weight: 600;
+    font-size:7vw;
+    padding-top: 0vw;
+    margin-top: 0vw;
+  }
+  
+  #About-Us:hover {
+    background-color: #7275a5;
+  }
+
+  #des{
+    color: white;
+    position: absolute;
+    left: 30vw;
+    top:24vw;
+    font-weight: 600;
+    font-size:3.5vw;
+    font-family: 'Raleway', sans-serif;
+    margin-top:0vw;
+  }
+
+  #signin{
+    background-color: rgb(255, 255, 255);
+    border: none;
+    color: rgb(136, 56, 202);
+    background: white;
+    font-weight: bold;
+    padding: 0.5vw 2vw;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 10vw;
+    outline: none;
+    font-size: 1vw;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    font-family: 'Raleway', sans-serif;
+    justify-self: end;
+    align-self: center;
+    position: absolute;
+    right: 20vw;
+    top: 2vw;
+
+  }
+  #signin:hover{
+    background-color: rgb(136, 56, 202);
+    color: rgb(255, 255, 255);
+    transform: translateY(-4px);
+    box-shadow: 0px 10px 18px rgb(194, 114, 228);
+  }
+  #contactus{
+    border: none;
+    font-family: 'Raleway', sans-serif;
+    padding: 0.5vw 2vw;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 10vw;
+    outline: none;
+    font-size: 1vw;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    justify-self: end;
+    align-self: center;
+    position: absolute;
+    right: 7vw;
+    top: 2vw;
+
+  }
+  #contactus:hover{
+    background: rgb(255, 255, 255, 0.5);
+    color: rgb(136, 56, 202);
+	  transform: translateY(-4px);
+    box-shadow: 0px 10px 18px rgb(241, 220, 215);
+  }
+  #signup{
+    border: none;
+    font-family: 'Raleway', sans-serif;
+    padding: 0.5vw 2vw;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 10vw;
+    outline: none;
+    font-size: 1vw;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    justify-self: end;
+    align-self: center;
+    position: absolute;
+    left: 42.5vw;
+    top: 30vw;
+  }
+
+  #signup:hover{
+    background: rgb(255, 255, 255, 0.5);
+    color: rgb(136, 56, 202);
+	  transform: translateY(-4px);
+    box-shadow: 0px 10px 18px rgb(241, 220, 215);
+    font-weight:bold;
+  }
+
+  #testing{ 
+    background:#f7f7f7;
+    color:rgb(0, 0, 0);
+    text-align:center;
+  }
+
+  .firstlogo{
+    position:absolute;
+    height:4vw;
+    width:4vw;
+    top:1vw;
+    left:1vw;
+  }
+
+  .footerlogo{
+    position:absolute;
+    height:5vw;
+    width:5vw;
+    top:2vw;
+    left:5.5vw;
+  }
+
+  .footerdescription{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 0.8vw;
+    color:rgb(90, 90, 90);
+    position:absolute;
+    top:8vw;
+    left:5.5vw;
+  }
+
+  .phoneicon{
+    font-size: 1.5vw;
+    color: rgb(90, 90, 90);
+    position: absolute;
+    top:2.3vw;
+    left:35.5vw;
+  }
+
+  .envelopeicon{
+    font-size: 1.5vw;
+    color: rgb(90, 90, 90);
+    position: absolute;
+    top:5.3vw;
+    left:35.5vw;
+  }
+
+  .footerstuff{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 1.5vw;
+    color:rgb(90, 90, 90);
+    position:absolute;
+  }
+  .phonenumber{
+    top:2vw;
+    left:37.5vw;
+  }
+
+  .email{
+    top:5.3vw;
+    left:37.5vw;
+  }
+
+  .developers{
+    top:8.3vw;
+    left:35.5vw;
+  }
+
+  .updated{
+    top:2vw;
+    left:68.5vw;
+  }
+
+  .subscribe{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 1vw;
+    color:rgb(90, 90, 90);
+    position:absolute;
+    top:5.5vw;
+    left:69vw;
+  }
+
+  .subscription{
+    width: 18vw;
+    background-color: rgb(255, 246, 246);
+    font-weight: 200;
+    font-size: 0.7vw;
+    color:black;
+    letter-spacing: 0.1vw;
+    padding: 0.6vw 1vw;
+    border-radius: 1.1vw;
+    outline: none;
+    border: 0.1vw solid rgb(255, 255, 255);
+    position:absolute;
+    top:7.4vw;
+    left:69vw;
+  }
+ 
+  .subbtn{
+  position: absolute;
+  top: 8.5vw;
+  left: 84.25vw;
+  transform: translateY(-50%);
+  font-size: 0.8vw;
+  color: #fff;
+  line-height: 2.1vw;
+  background: rgb(193, 111, 235);
+  height: 2.2vw;
+  width: 5vw;
+  user-select: none;
+  border-radius: 1.1vw;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align:center;
+  border-radius: 1.1vw;
+  }
+
+  .motto{
+  color:rgb(0, 0, 0);
+  font-weight:800;
+  font-size:3vw;
+  font-family: 'Raleway', sans-serif;
+  position: absolute;
+  left: 10vw;
+  top:52.5vw;
+  text-align:left;
+  }
+
+  .content{
+  color:rgb(35, 35, 37);
+  font-weight:400;
+  font-size: 1.2vw;
+  font-family: 'Raleway', sans-serif;
+  position: absolute;
+  left: 10vw;
+  top:60vw;
+  line-height:1.6;
+  }
+
+  .splashphoto{
+    position:absolute;
+    left:47vw;
+    top:55.5vw;
+    width: 45vw;
+    max-width: 60vw;
+    height: 28vw;
+
+  }
+
+  .points{
+    color:rgb(77, 77, 77);
+    font-weight:400;
+    font-size: 1vw;
+    font-family: 'Raleway', sans-serif;
+    position: absolute;
+    left:11vw;
+    top:64.5vw;
+    line-height:1.6;
+
+  }
+
+  .icon{
+    font-size: 1vw;
+    color: rgb(0,0,0);
+    float: left;
+    position: absolute;
+  }
+  .calendar{
+    top: 97vw;
+    left: 12vw;
+  }
+  .pencil{
+    top: 97vw;
+    left: 44vw;
+  }
+.chart{
+  top: 97vw;
+  left: 77vw;
+
+}
+
+.circle-icon {
+  background: #f8c0ff;
+  width: 5.5vw;
+  height: 5.5vw;
+  border-radius: 50vw;
+  text-align: center;
+  line-height: 5vw;
+  vertical-align: middle;
+  padding:1.5vw;
+
+}
+
+.description{
+  font-family:'Raleway', sans-serif;;
+  font-size:0.9vw;
+  font-weight: 400;
+  position: absolute;
+  text-align:left;
+  line-height:1.5vw;
+}
+
+.one{
+  top:108.5vw;
+  left:4vw;
+}
+
+.two{
+  top:108.5vw;
+  left:37vw;
+}
+
+.three{
+  top:108.5vw;
+  left:68vw;
+}
+
+#Questions{
+  font-family:'Raleway', sans-serif;;
+  font-size:4vw;
+  font-weight: 500;
+  position: absolute;
+  top:119vw;
+  left:28vw;
+}
+
+.name{
+  width: 17vw;
+  background-color: rgb(255, 246, 246);
+  font-weight: 200;
+  font-size: 0.7vw;
+  color:black;
+  letter-spacing: 0.1vw;
+  padding: 0.6vw 1vw;
+  border-radius: 1.1vw;
+  outline: none;
+  border: 0.1vw solid rgb(255, 255, 255);
+  position:absolute;
+  top:136vw;
+  left:65.5vw;
+}
+
+.name:focus{
+  border: 0.15vw solid rgb(136, 56, 202);
+}
+
+.useremail{
+  width: 17vw;
+  background-color: rgb(255, 246, 246);
+  font-weight: 200;
+  font-size: 0.7vw;
+  color:black;
+  letter-spacing: 0.1vw;
+  padding: 0.6vw 1vw;
+  border-radius: 1.1vw;
+  outline: none;
+  border: 0.1vw solid rgb(255, 255, 255);
+  position:absolute;
+  top:139vw;
+  left:65.5vw;
+}
+
+.useremail:focus{
+  border: 0.15vw solid rgb(136, 56, 202);
+} 
+
+.message{
+  width: 17vw;
+  background-color: rgb(255, 246, 246);
+  font-weight: 200;
+  font-size: 0.7vw;
+  color:black;
+  letter-spacing: 0.1vw;
+  padding: 0.6vw 1vw;
+  border-radius: 1.1vw;
+  outline: none;
+  border: 0.1vw solid rgb(255, 255, 255);
+  position:absolute;
+  height:10vw;
+  top:142vw;
+  left:65.5vw;
+}
+
+.message:focus{
+  border: 0.15vw solid rgb(136, 56, 202);
+}
+
+#box2{
+	width: 35vw;
+	height: 34.5vw;
+  background:linear-gradient(lightblue,rgb(53, 12, 92));
+  white-space:pre;
+	border-radius: 2.5vw;
+  position:absolute;
+  top: 131vw;
+  left:58vw;
+  transform:rotate(45deg);
+  overflow:hidden;
+}
+
+#box3{
+  width: 0;
+  height: 0;
+  border-left: 30vw solid transparent;
+  border-right: 30vw solid transparent;
+  border-top: 30vw solid lightblue;
+  color:linear-gradient(lightblue,rgb(53, 12, 92));
+  position:absolute;
+  top: 123.5vw;
+  border-radius: 1.5vw 5vw 5vw 5vw;
+  left:77vw;
+  overflow:hidden;
+}
+
+#box4{
+  width: 0;
+  height: 0;
+  border-left: 20vw solid transparent;
+  border-right: 20vw solid transparent;
+  border-bottom: 20vw solid lightblue;
+  position:absolute;
+  top: 140vw;
+  left:90.5vw;
+  overflow:hidden;
+}
+
+.footer {
+    background-color:rgb(200, 153, 223); 
+    position: absolute;
+    top: 160vw;
+    left: 0;
+    bottom: 0;
+    height: 12.8vw;
+    width: 100vw;
+    overflow:hidden;
+}
+
+#experience{
+  background-color: rgb(136, 56, 202);
+  border: none;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  padding: 0.5vw 2vw;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 10vw;
+  outline: none;
+  font-size: 1vw;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  font-family: 'Raleway', sans-serif;
+  justify-self: end;
+  align-self: center;
+  position: absolute;
+  top:79vw;
+  left:10vw;
+}
+
+#experience:hover{
+  background: rgb(136, 56, 202);
+    color: rgb(255, 255, 255);
+	  transform: translateY(-3px);
+    box-shadow: 0px 10px 18px rgb(209, 174, 241);
+    font-weight:bold;
+}
+
+.headericon{
+  font-family: 'Raleway', sans-serif;
+  color: rgb(0, 0, 0);
+  position: absolute;
+  left: 29vw;
+  top:89vw;
+  font-weight: 600;
+  font-size:2vw;
+  text-align: center;
+}
+
+.heading{
+  font-family: 'Raleway', sans-serif;
+  color: rgb(0, 0, 0);
+  position: absolute;
+  font-weight: bold;
+  font-size:1.3vw;
+}
+
+.First{
+  left: 11.5vw;
+  top:106.5vw;
+}
+.Second{
+  top:106.5vw;
+  left: 45vw;
+}
+.Third{
+  top:106.5vw;
+  left:74vw;
+}
+
+.questionspart{
+  font-family: 'Raleway', sans-serif;
+  color: rgb(0, 0, 0);
+  position: absolute;
+  font-weight: 600;
+  font-size:1.2vw;
+  top:133.5vw;
+  left: 14vw;
+}
+
+.questiondes{
+  font-family: 'Raleway', sans-serif;
+  color: rgb(48, 47, 47);
+  position: absolute;
+  font-weight: 400;
+  font-size:1vw;
+  top:137.5vw;
+  left: 14vw;
+  line-height: 1.3vw;
+}

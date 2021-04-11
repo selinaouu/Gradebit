@@ -1,0 +1,38 @@
+<!--Page for the student list for evidence record-->
+<!--Selina Ou-->
+{% extends 'base2.html' %}
+{% block content %}
+<table class="table table-hover text-center table-borderless ">
+    <thead class="border-bottom font-weight-bold">
+        <tr>
+            <td>First Name</td>
+            <td>Last Name</td>
+            <td>Class</td>
+            <td>
+                <a href="{% url 'studentgrades_form' %}" class="btn btn-outline-primary">
+                    <i class="fas fa-plus"></i> Add New
+                </a>
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for studentgrades in users %}
+            <tr>
+                <td>{{studentgrades.first_name}}</td>
+                <td>{{studentgrades.last_name}}</td>
+                <td>{{studentgrades.class_name}}</td>
+                <td>
+                    <form action="{% url 'studentgrades_delete' studentgrades.id %}" method="post" class="d-inline">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-outline-danger">
+                            Delete
+                         </button>
+                    </form>
+                    <a href="{% url 'gradebook' studentgrades.id %}" class="btn btn-outline-success"><i class="fas fa-plus"></i> View</a>
+                </td>
+
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock content %}

@@ -1,0 +1,199 @@
+<!--Evidence Record Page-->
+<!--Selina Ou-->
+{% load static  %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?" rel=stylesheet>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;600&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/gradebook.css' %}">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    </head>
+    <body>
+        <header class="mainheader">
+            <img class= "headerlogo" src="{% static 'css/media/logo.png' %}">
+            <h2 class="headertitle">Gradebit</h2>
+            <h3 class="year currenty">
+                <script>
+                    var CurrentYear = new Date().getFullYear()
+                    document.write(CurrentYear)
+                </script>
+            </h3>
+            <h3 class="year indent">-</h3>
+            <h3 class="year nexty">
+                <script>
+                    var CurrentYear = new Date().getFullYear()+1
+                    document.write(CurrentYear)
+                </script>
+            </h3>
+            {% if user.is_authenticated %}
+            <h4 style="margin-left: 80vw;margin-top: -0.5vw;font-size: 1vw;">Welcome back, {{user.username}}!</h4>
+            {% else %}
+            {% endif %}
+            
+        </header>
+        <div id="navbar">
+            <div id="wrapper">
+                    <li class="b"><a href="{% url 'task_list' %}" style="text-decoration: none; color: white;">Dashboard</a></li>
+                    <li class="c"><a href="{% url 'student_list' %}" style="text-decoration: none; color: white;">Students</a></li>
+                    <li class="d"><a class="active" href="{% url 'studentgrades_list' %}" style="text-decoration: none; color: white;">Gradebook</a></li>
+                    <li class="e"><a href="{% url 'logout' %}" style="text-decoration: none; color: white">Sign Out</a></li>
+            </div>
+        </div>
+        <div class="jumbotron pt-3" style="position:absolute;left:73vw;width:23vw;background-color: #f8f8f8;top:7vw;height:13vw;">
+        </div>
+        <div class="jumbotron pt-3" style="position:absolute;left:3vw;width:68vw;background-color: #f8f8f8;top:7vw;">
+            <h1 style="text-align: left;font-family: 'Raleway', sans-serif;font-weight:bold;">{{studentgrades.last_name}}, {{studentgrades.first_name}}</h1>
+            <hr class="my-4">
+        <div>
+        </div>
+       
+        <table class="table table-hover"  style="text-align:center;">
+            <thead class="border-bottom font-weight-bold">
+            <tr>
+                <td style="font-size: 1vw"></td>
+                 <td style="font-size: 1vw">INC</td>
+                 <td style="font-size: 1vw">R</td>
+                <td style="font-size: 1vw">-</td>
+                <td style="font-size: 1vw">1</td>
+                <td style="font-size: 1vw">+</td>
+                <td style="font-size: 1vw">-</td>
+                <td style="font-size: 1vw">2</td>
+                <td style="font-size: 1vw">+</td>
+                <td style="font-size: 1vw">-</td>
+                <td style="font-size: 1vw">3</td>
+                <td style="font-size: 1vw">+</td>
+                <td style="font-size: 1vw">-/+</td>
+                <td style="font-size: 1vw">-</td>
+                <td style="font-size: 1vw">(-)</td>
+                <td style="font-size: 1vw">4</td>
+                <td style="font-size: 1vw">(+)</td>
+                <td style="font-size: 1vw">+</td>
+                <td style="font-size: 1vw">+</td>
+                <td style="font-size: 1vw">Level</td>
+                <td style="font-size: 1vw; position:absolute;right:-17.5vw;top:1vw;"> <a href="{% url 'evi_form' studentgrades.id %}" class="btn btn-success btn-block btn-lg">
+                    +Add Task
+                </a> </td>
+                <td style="font-size: 1vw; position:absolute;right:-17.5vw;top:5vw;"> <a href="{% url 'category_form' studentgrades.id %}" class="btn btn-success btn-block btn-lg">
+                    +Add Unit
+                </a> </td>
+                <td style="font-size: 1vw; position:absolute;right:-19vw;top:8.5vw;"> <a href="{% url 'additional_form' studentgrades.id %}" class="btn btn-success btn-block btn-lg">
+                    +Add Additional
+                </a> </td>
+                </tr>
+                </thead>
+            <tbody>
+                <thread>
+                    <td>
+                        {%for category in categories %}
+                            <td style="font-size: 1.5vw; font-weight: bold;" >{{category.category_name}} </td>
+                           
+                       </td>
+                       <td>
+                        <form action="{% url 'category_delete' category.id %}" method="post" class="inline">
+                        {% csrf_token %}
+                            <button type="submit" class="btn btn-outline-danger" style="float:right">Delete</button>
+                        </form>
+                    </td>
+                    {%endfor%}
+                </thread>
+               
+                {%for evidencerec in evidencerecs %}
+                <tr>
+  
+                <td style="font-size: 1vw;font-weight: bold;" >{{evidencerec.subcategory}}</td>
+                <td style="font-size: 1vw">{{evidencerec.inc}}</td>
+                <td style="font-size: 1vw">{{evidencerec.r_middle}}</td>
+                <td style="font-size: 1vw">{{evidencerec.one_minus}}</td>
+                <td style="font-size: 1vw">{{evidencerec.one_middle}}</td>
+                <td style="font-size: 1vw">{{evidencerec.one_plus}}</td>
+                <td style="font-size: 1vw">{{evidencerec.two_minus}}</td>
+                <td style="font-size: 1vw" >{{evidencerec.two_middle}}</td>
+                <td style="font-size: 1vw">{{evidencerec.two_plus}}</td>
+                <td style="font-size: 1vw">{{evidencerec.two_minus}}</td>
+                <td style="font-size: 1vw">{{evidencerec.three_middle}}</td>
+                <td style="font-size: 1vw">{{evidencerec.three_plus}}</td>
+                <td style="font-size: 1vw">{{evidencerec.threepfourm}}</td>
+                <td style="font-size: 1vw">{{evidencerec.four_minus}}</td>
+                <td style="font-size: 1vw">{{evidencerec.fourmfourmid}}</d>
+                <td style="font-size: 1vw">{{evidencerec.four_middle}}</td>
+                <td style="font-size: 1vw">{{evidencerec.fourmfourp}}</td>
+                <td style="font-size: 1vw">{{evidencerec.four_plus}}</td>
+                <td style="font-size: 1vw">{{evidencerec.four_plusplus}}</td>
+                <td style="font-size: 1vw">{{evidencerec.level}}</td>
+                  <td>
+                    <a href="{% url 'evi_update' evidencerec.id %}" class="btn btn-outline-primary" style="float:right">
+                        Edit
+                    </a>
+                   </td>
+                   <td>
+                    <form action="{% url 'evi_delete' evidencerec.id %}" method="post" class="inline">
+                    {% csrf_token %}
+                        <button type="submit" class="btn btn-outline-danger" style="float:right" >Delete</button>
+                    </form>
+                </td>
+                </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+        <div class="jumbotron pt-3" style="position:absolute;left:70vw;width:23vw;background-color: #f8f8f8;top:15vw;">
+            <h1 style="text-align: left;font-family: 'Raleway', sans-serif;font-weight:bold;"></h1>
+            <h1 style="text-align: center;font-family: 'Raleway', sans-serif;font-weight:bold;font-size:1.3vw;">Tasks:</h1>
+
+        <table class="table table-striped table-hover">
+            <thead class="border-bottom font-weight-bold">
+                <tr>
+                    <td style="font-size: 1vw">Subcategory</td>
+                    <td style="font-size: 1vw">Expectation</td>
+                </tr>
+            </thead>
+            <tbody>
+                {%for evidencerec in evidencerecs %}
+                <tr>
+                    <td style="width: 2.5vw; 
+                    height: 2.5vw; 
+                    padding: 0.4vw 0.3vw; 
+                    border-radius: 1.75vw; 
+                    font-size: 1vw; 
+                    text-align: center; " class="btn btn-primary btn-circle btn-sm">{{evidencerec.subcategory}}</td>
+                    <td style="font-size: 1vw" >{{evidencerec.expectation}}</td>
+                </tr>
+                {%endfor%}
+
+            </tbody>
+        </table>
+       
+    </div>
+    <div class="jumbotron pt-3" style="position:absolute;left:70vw;width:23vw;top:33vw;background-color: #f8f8f8;">
+        <table class="table table-striped table-hover">
+            <thead class="border-bottom font-weight-bold">
+                <tr>
+                    <td style="font-size: 1vw">Final Grade</td>
+                    <td style="font-size: 1vw">Comments</td>
+                </tr>
+            </thead>
+            <tbody>
+                {%for additional in additionals %}
+                <tr>
+                    <td style="font-size: 1vw">{{additional.final_grade}}</td>
+                    <td style="font-size: 1vw" >{{additional.comments}}</td>
+                   <td>
+                    <form action="{% url 'additional_delete' additional.id %}" method="post" class="inline">
+                    {% csrf_token %}
+                        <button type="submit" class="btn btn-outline-danger" style="float:right">Delete</button>
+                    </form>
+                </td>
+                </tr>
+                {%endfor%}
+
+            </tbody>
+        </table>
+        </div>
+</div>
+</div>
+</div>
+        
+    </body>
+    </html>

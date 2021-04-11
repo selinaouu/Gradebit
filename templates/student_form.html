@@ -1,0 +1,32 @@
+<!--Displays the form to add students to Students-->
+<!--Selina Ou-->
+{% extends 'students2.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<h2>Add a New Student</h2>
+<form action="" method="POST">
+    {% csrf_token %}
+    
+
+    <div class="row">
+        <div class="col-md-12">
+            {{ form.first_name|as_crispy_field }}
+            {{ form.last_name|as_crispy_field }}
+            {{ form.class_name|as_crispy_field }}
+        </div>
+        <div class="col-md-4">
+            {{ form.grade|as_crispy_field }}
+        </div>
+        <div class="col-md-5">
+            {{ form.semester|as_crispy_field }}
+        </div>
+    </div>
+    <div class="text-left">
+        <button type="submit" class="btn btn-success btn-lg">+ Add Student</button>
+        <a href="{% url 'student_list'%}" class="btn btn-outline-secondary btn-lg"><i>Back to List</i></a>
+       
+    </div>
+
+</form>
+{% endblock content %}

@@ -1,0 +1,117 @@
+<!--Splashpage/Main Page of Gradebit-->
+<!--Selina Ou-->
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?" rel=stylesheet>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;600&display=swap" rel="stylesheet">
+    <link href= "signin.html">
+    <link href="signup.html">
+    <link href="index.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">  
+    <title>Gradebit</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+</head>
+
+<body>
+  <div id="container">
+    <header id="trial"style="background-image: url('{% static 'css/media/backgroundgradebit.jpg' %}')" >
+      <img class= "firstlogo" src="{% static 'css/media/logo.png' %}" alt="logo">
+        <h1 class="titre" >Gradebit</h1>
+        <h2 id ="des">Grading with precision.</h2>
+
+
+        <vs-button id="signin" onclick="location.href='accounts/signin'">Sign in</vs-button>
+        <vs-button id="contactus" onclick="document.location= '#Questions'">Contact us</vs-button>
+        <button id="signup" onclick="location.href='accounts/signup'"> Sign up free</button>
+
+
+        <div id="testing">
+          <h2 class="motto">Grading has never been<br> easier.</h2>
+        </div>
+    </header>
+        
+      <div>
+        <h5 class="content">From precise grading to managing your classes,<br> 
+          Gradebit has got you covered.</h5>
+
+      <ul class="points">
+          <li >Dynamically sizing graphical gradebook so multiple assignment marks <br> can be under the same grade.</li>
+          <br>
+          <li >Forgot what you needed to mark? Check out our interactive To-Do List <br>so you'll never forget a thing! </li>
+          <br>
+          <li >With Gradebit, keeping track of students marks will be a breeze.<br> What are you waiting for? Start your experience now!</li>
+      </ul>
+        <vs-button id="experience" onclick="location.href='accounts/signup'"> Start your experience →</vs-button>
+        <img src="{% static 'css/media/splashstudentimage.png' %}" class="splashphoto">
+      </div>
+  
+      <div class="icon calendar">
+        <i class="fa fa-calendar-check-o circle-icon" style="font-size:4vw"></i>
+      </div>
+
+      <div class="icon pencil">
+        <i class="fa fa-pencil-square-o  circle-icon" style="font-size:4vw"></i>
+      </div>
+
+      <div class="icon chart">
+        <i class="fa fa-bar-chart  circle-icon" style="font-size:4vw"></i>
+      </div>
+
+      <h2 class="headericon">Flexible Grading. Manage Multiple Classes.<br>Ideal for Distance Learning.</h2>
+
+      <h4 class="heading First">Flexible Grading</h4>
+      <p class="description one">Not only does Gradebit have a intuitive, practical, interface, it's<br> dynamically sizing gradebook with 
+        a smaller grade range for<br> each level allows for teachers to mark their students work with<br> precision and accuracy.
+      </p>
+
+      <h5 class="heading Second">Easy To Use</h5>
+      <p class="description two">Gradebit has no software to install and teachers are able<br> to access data whether at home or at school. Gradebit 
+      can<br> be used with Internet Explorer, Firefox, Safari, and Chrome<br> on PC.</p>
+
+      <h5 class="heading Third">Get the right gradebook</h5>
+      <p class="description three">Gradebit is a fantastic marking software for teachers who want a <br> simple yet effective gradebook. 
+      But the best part about it is that<br> users can have access to all the features, free of cost.</p>
+    
+      <h2 id="Questions">Questions? Contact Us!</h2>
+      <div id="box2"></div>
+      <div id="box3"></div>
+      <div id="box4"></div>
+
+      <input align="center" class="name" type="text" name="Name" placeholder="Name">
+      <input align="center" class="useremail" type="text" name="email" placeholder="Email">
+      <textarea align="center" class="message" rows="4" cols="50"placeholder="Questions/Comments."></textarea>
+
+      <h3 class= "questionspart">Have a comment or encountering difficulties when<br> using Gradebit? Don't hesitate to contact us!</h3>
+      <p class="questiondes">After contacting us, you will be able to receive a reply as soon<br> as possible from our developers. 
+        Since Gradebit is still in its early<br> stages of development, feel free to let us know about any features<br> that you would potentially like to see
+        Or, if you encounter any issues,<br> don't hestitate to contact us and let us know. Whether it'd be a <br>comment or a question we're always happy to help!
+        We would also<br> like to thank you for helping making Gradebit the best platform<br> possible through your feedback. Happy grading!
+       </p>
+
+      <footer class="footer">
+        <img class= "footerlogo" src="{% static 'css/media/logo.png' %}">
+        <p class="footerdescription">Gradebit is a grading software designed for teachers<br> 
+          who are seeking a simple yet precise gradebook that<br> will provide them with optimal marking precision. </p>
+    
+          <h4 class="fa fa-phone phoneicon"></h4>
+          <h4 class="footerstuff phonenumber">613-519-9999</h4>
+          <h4 class="fa fa-envelope envelopeicon"></h4>
+          <h4 class="footerstuff email">Gradebit@gmail.com</h4>
+          <h4 class="footerstuff developers"><b>Developers:</b> Selina Ou & Ally Tan</h4>
+          
+          <h4 class="footerstuff updated">Stay Updated!</h4>
+          <p class="subscribe">Subscribe to our newsletter to get our latest news</p>
+          <input align="center" class="subscription" type="text" name="email" placeholder="Email">
+          <label for="click" class="subbtn">Subscribe</label>
+      </footer>
+      
+  </div>
+
+
+
+</body>
+</html>

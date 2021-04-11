@@ -1,0 +1,389 @@
+/* Selina Ou*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;600&display=swap');
+@font-face {
+    font-family: 'Raleway', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;600&display=swap');
+}
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    overflow-y:scroll;
+    background: #e2e3e4;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    overflow-x: auto;
+    margin:auto;  
+  }
+
+.mainheader{
+    background-color:rgb(200, 153, 223); 
+    position: absolute;
+    top: 0vw;
+    padding: 1.3vw;
+    width: 110vw;
+    overflow:hidden;
+}
+
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 0.42vw;
+    text-decoration: none;
+    width:10vw;
+    top:0.2vw;
+    position: absolute;
+    font-size: 0.9vw;
+  }
+
+  .b{
+    top:-.2vw;
+    left:0vw;
+    position: absolute;
+    list-style-type:none;
+  }
+  .c{
+    top:-.2vw;
+    left:10vw;
+    position: absolute;
+    list-style-type:none;
+  }
+  .d{
+    top:-.2vw;
+    left:20vw;
+    position: absolute;
+    list-style-type:none;
+  }
+  .e{
+    top:-.2vw;
+    left:89.2vw;
+    position: absolute;
+    list-style-type:none;
+  }
+
+  li a:hover:not(.active) {
+    background-color: rgb(203, 157, 221);
+  }
+  
+  .active {
+    background-color: #774caf;
+  }
+
+  #wrapper{
+    position:absolute;
+    top:2.5vw;
+    overflow: hidden;
+    background-color: #333;
+    width:100vw;
+    height:2.1vw;
+  }
+
+  .headerlogo{
+    position:absolute;
+    width:2vw;
+    height:2vw;
+    top:0.3vw;
+  }
+
+  .headertitle{
+    position:absolute;
+    font-weight: 500;
+    font-size:1.4vw;
+    top:0.5vw;
+    left:5vw;
+    color:#fbfcff;
+  }
+
+  .year{
+    position:absolute;
+    font-weight: 500;
+    font-size:1vw;
+    color:#fbfcff;
+  }
+
+  .currenty{
+    top:0.7vw;
+    left:12.5vw;
+  }
+  .indent{
+    top:0.7vw;
+    left:14.6vw;
+  }
+
+  .nexty{
+    top:0.7vw;
+    left:15.2vw;
+  }
+
+  .dropbtn{
+    position:fixed;
+    background: rgb(203, 157, 221);
+    border: none !important;
+    top:0.3vw;
+    left:93vw;
+    border:none;
+    outline:none;
+    cursor:pointer;
+    width:2.5vw;
+    border-radius: 0.2vw;
+  }
+
+.sidebarcontent{
+  height:44vw;
+  width:80vw;
+  background-color: #fbfcff;
+  filter: drop-shadow(0 0 10px  rgb(192, 191, 191));
+  border-radius: 1vw;
+  position:absolute;
+  top:6vw;
+  left:10vw;
+  padding-left:7vw;
+  padding-top:6vw;
+  padding-right:2vw;
+}
+
+.tableFixHead {
+  overflow-y: scroll;
+  height: 40vw;
+}
+.tableFixHead thead th {
+  position: sticky;
+  top: 0;
+}
+
+th,td {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+  }
+th {
+  background: #eee;
+}
+
+.addbtn{
+  border-radius:1vw;
+  width:7vw;
+  height:2vw;
+  position:absolute;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  outline:none;
+  border:none;
+  font-size:1vw;
+  cursor: pointer;
+  top:4vw;
+  left:2vw;
+  background:rgb(203, 157, 221);
+}
+
+.editbtn{
+  border-radius:1vw;
+  width:7vw;
+  height:2vw;
+  position:absolute;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  outline:none;
+  border:none;
+  font-size:1vw;
+  cursor: relative;
+  top:4vw;
+  left:11.5vw;
+  background:rgb(203, 157, 221);
+  cursor:pointer;
+}
+
+.deletebtn{
+  border-radius:1vw;
+  width:7vw;
+  height:2vw;
+  position:absolute;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  outline:none;
+  border:none;
+  font-size:1vw;
+  cursor: pointer;
+  top:4vw;
+  left:21vw;
+  background:rgb(203, 157, 221);
+}
+
+.savebtn{
+  border-radius:1.5vw;
+  width:8vw;
+  height:2.2vw;
+  position:absolute;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  outline:none;
+  border:none;
+  font-size:1.3vw;
+  cursor: pointer;
+  top:33vw;
+  left:11.5vw;
+  background:rgb(203, 157, 221);
+}
+
+.options{
+  height:43vw;
+  width:30vw;
+  background-color: #fbfcff;
+  filter: drop-shadow(0 0 10px  rgb(192, 191, 191));
+  border-radius: 1vw;
+  position:absolute;
+  top:5vw;
+  right:4vw;
+}
+
+.opheading{
+  position:absolute;
+  top:1vw;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size:2vw;
+  left:11vw;
+}
+
+.opheadings{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size:1.3vw;
+  position:absolute;
+}
+
+.firstn{
+  top:9vw;
+  left:5vw;
+}
+.lastn{
+  top:13.5vw;
+  left:5vw;
+}
+.grade{
+  top:17.5vw;
+  left:5vw;
+}
+.class{
+  top:21.5vw;
+  left:5vw;
+}
+.semester{
+  top:25.5vw;
+  left:5vw;
+}
+
+.fnm{
+  width: 21vw;
+  background-color: #fbfcff;
+  font-weight: 200;
+  font-size: 0.7vw;
+  color:black;
+  letter-spacing: 0.1vw;
+  padding: 0.6vw 1vw;
+  border-radius: 1.1vw;
+  outline: none;
+  border: 0.12vw solid rgb(133, 133, 133);
+  position:absolute;
+  top:10.5vw;
+  left:4vw;
+}
+
+.lnm{
+  width: 21vw;
+  background-color: #fbfcff;
+  font-weight: 200;
+  font-size: 0.7vw;
+  color:black;
+  letter-spacing: 0.1vw;
+  padding: 0.6vw 1vw;
+  border-radius: 1.1vw;
+  outline: none;
+  border: 0.12vw solid rgb(133, 133, 133);
+  position:absolute;
+  top:15vw;
+  left:4vw;
+}
+
+.gd{
+  width: 21vw;
+  background-color: #fbfcff;
+  font-weight: 200;
+  font-size: 0.7vw;
+  color:black;
+  letter-spacing: 0.1vw;
+  padding: 0.6vw 1vw;
+  border-radius: 1.1vw;
+  outline: none;
+  border: 0.12vw solid rgb(133, 133, 133);
+  position:absolute;
+  top:19vw;
+  left:4vw;
+}
+
+.cn{
+  width: 21vw;
+  background-color: #fbfcff;
+  font-weight: 200;
+  font-size: 0.7vw;
+  color:black;
+  letter-spacing: 0.1vw;
+  padding: 0.6vw 1vw;
+  border-radius: 1.1vw;
+  outline: none;
+  border: 0.12vw solid rgb(133, 133, 133);
+  position:absolute;
+  top:23vw;
+  left:4vw;
+}
+
+.sm{
+  width: 21vw;
+  background-color: #fbfcff;
+  font-weight: 200;
+  font-size: 0.7vw;
+  color:black;
+  letter-spacing: 0.1vw;
+  padding: 0.6vw 1vw;
+  border-radius: 1.1vw;
+  outline: none;
+  border: 0.12vw solid rgb(133, 133, 133);
+  position:absolute;
+  top:27vw;
+  left:4vw;
+}
+tr{transition:all .25s ease-in-out}
+tr:hover{background-color:rgb(247, 247, 247);cursor: pointer}
+
+.studenttitle{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size:2.5vw;
+  position:absolute;
+  top:1vw;
+  left:32vw;
+}
+
+.signupmessages{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size:0.8vw;
+  position:absolute;
+  top:75vw;
+  left:14vw;
+  text-align: center;
+}
+

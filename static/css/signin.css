@@ -1,0 +1,195 @@
+/* Selina Ou*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;600&display=swap');
+@font-face {
+    font-family: 'Raleway', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;600&display=swap');
+ 
+  }
+
+  body {
+    overflow-y:scroll;
+    background: rgb(243, 235, 246);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 3vw;
+    display: flex;
+    background-image: linear-gradient(to top, #b4bfe9 0%, #cbeff8 100%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+
+  #border{
+    height: 42.5vw;
+    width: 40vw;
+    background-color: white;
+    filter: drop-shadow(0 0 10px  rgb(192, 191, 191));
+    border-radius: 3vw;
+    margin-top:1vw;
+    margin-left: 30vw;
+    margin-right: auto;
+  }
+
+  #logo{
+      height: 5vw;
+      width: 7vw;
+      border-radius: 2vw;
+      position:absolute;
+      background-repeat: no-repeat;
+      top: 3vw;
+  }
+
+  #app{
+    display: absolute;
+  }
+
+  #signup{
+    font-family: 'Raleway', sans-serif;
+    font-size: 3.5vw;
+    padding-top: 3.5vw;
+  }
+
+.signup {
+    text-shadow: 0vw 0vw 0.5vw rgba(117, 117, 117, 0.12);
+    padding-top: 2vw;
+    font-weight:200;
+    position:absolute;
+    font-size: 0.7vw;
+    font-family: 'Raleway', sans-serif;
+    top:34.5vw;
+    left:17.5vw;
+    color: #670694;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.un {
+  width: 32vw;
+  background-color: rgba(199, 199, 201, 0.178);
+  font-weight: 200;
+  font-size: 0.7vw;
+  letter-spacing: 0.3vw;
+  padding: 0.6vw 1vw;
+  border-radius: 1.1vw;
+  outline: none;
+  border: 0.1vw solid rgba(0, 0, 0, 0.02);
+  position:absolute;
+  top: 12.5vw;
+  left:3vw;
+}
+
+.pass {
+  width: 32vw;
+  background-color: rgba(199, 199, 201, 0.178);
+  font-weight: 200;
+  font-size: 0.7vw;
+  letter-spacing: 0.3vw;
+  padding: 0.6vw 1vw;
+  border-radius: 1.1vw;
+  outline: none;
+  border: 0.1vw solid rgba(0, 0, 0, 0.02);
+  position:absolute;
+  top: 18.5vw;
+  left:3vw;
+}
+  
+.L1{
+  position: absolute;
+  font-size: 0.8vw;
+  font-family: 'Raleway', sans-serif;
+  top:11.2vw;
+  left:5.75vw;
+}
+.L2{
+  position: absolute;
+  font-size: 0.8vw;
+  font-family: 'Raleway', sans-serif;
+  top:17.2vw;
+  left:5.75vw;
+
+}
+.L3{
+  position: absolute;
+  font-size: 0.8vw;
+  font-family: 'Raleway', sans-serif;
+  top:3vw;
+  left:9vw;
+
+}
+.L4{
+  position: absolute;
+  font-size: 1vw;
+  font-family: 'Raleway', sans-serif;
+  top:34vw;
+  left:14.2vw;
+}
+
+#useraccount{
+  border: none;
+  font-family: 'Raleway', sans-serif;
+  padding: 0.7vw 6vw;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 10vw;
+  outline: none;
+  font-size: 1vw;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  background: rgb(136, 56, 202); 
+  color: rgb(255, 255, 255);
+  justify-self: end;
+  align-self: center;
+  position:absolute;
+    left:12vw;
+    top:27.5vw;
+    
+}
+#useraccount:hover{
+  background: rgb(136, 56, 202);
+    color: rgb(255, 255, 255);
+	  transform: translateY(-3px);
+    box-shadow: 0px 10px 18px rgb(209, 174, 241);
+    font-weight:bold;
+}
+
+.forgot {
+  text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+  font-weight:200;
+  font-size: 3vw;
+  font-family: 'Raleway', sans-serif;
+  padding-left:17vw;
+  padding-top: 0vw;
+  text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+  color: #670694;
+  text-decoration: none;
+  font-size: 1vw;
+  font-weight: bold;
+  cursor: pointer;
+  position:absolute;
+  top:35.5vw;
+  left:0.8vw;
+}
+.forgot:hover{
+cursor: pointer;
+}
+
+.email {
+  width: 32vw;
+  background-color: rgba(199, 199, 201, 0.178);
+  font-weight: 200;
+  font-size: 0.7vw;
+  letter-spacing: 0.3vw;
+  padding: 0.6vw 1vw;
+  border-radius: 1.1vw;
+  outline: none;
+  border: 0.1vw solid rgba(0, 0, 0, 0.02);
+  position:absolute;
+  top:12.5vw;
+  left:3.2vw;
+}
+
+.email:focus{
+  border: 0.2vw solid rgba(0, 0, 0, 0.02);
+}

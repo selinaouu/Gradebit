@@ -1,0 +1,46 @@
+<!--Displays the Student list in Students-->
+<!--Selina Ou-->
+{% extends 'students2.html' %}
+
+{% block content %}
+
+<table class="table table-borderless table-hover">
+    <thread class="border-bottom font-weight-bold">
+        <tr>
+            <td class='font-weight-bold'>First Name</td>
+            <td class='font-weight-bold'>Last Name</td>
+            <td class='font-weight-bold'>Class Name</td>
+            <td class='font-weight-bold'>Grade</td>
+            <td class='font-weight-bold'>Semester</td>
+            <td>
+                
+                <a href="{% url 'student_form'%}" class="btn btn-outline-info" style="position:absolute;top: 2.5vw;right:59vw;width:16vw;height:3vw;font-size:1.5vw;">
+                    <i>+ Add Student</i>
+                </a>
+            </td>
+        </tr>
+    </thread>
+    <tbody>
+        {% for student in users %}
+        <tr>
+        <td>{{student.first_name}}</td>
+        <td>{{student.last_name}}</td>
+        <td>{{student.class_name}}</td>
+        <td>{{student.grade}}</td>
+        <td>{{student.semester}}</td>
+        <td>
+            <a href="{% url 'student_update' student.id %}" class="btn btn-outline-primary">
+                <i>Edit</i>
+            </a>
+            <form action="{% url 'student_delete' student.id %}" method="POST" class="d-inline">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-outline-danger">
+                    <i>Delete</i>
+                </button>
+            </form>
+        </td>
+    </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock content %}

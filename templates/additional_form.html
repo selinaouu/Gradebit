@@ -1,0 +1,64 @@
+<!--Additional Form-->
+<!--Selina Ou-->
+{% load static  %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?" rel=stylesheet>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;600&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/gradebook.css' %}">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    </head>
+    <body>
+        <header class="mainheader">
+            <img class= "headerlogo" src="{% static 'css/media/logo.png' %}">
+            <h2 class="headertitle">Gradebit</h2>
+            <h3 class="year currenty">
+                <script>
+                    var CurrentYear = new Date().getFullYear()
+                    document.write(CurrentYear)
+                </script>
+            </h3>
+            <h3 class="year indent">-</h3>
+            <h3 class="year nexty">
+                <script>
+                    var CurrentYear = new Date().getFullYear()+1
+                    document.write(CurrentYear)
+                </script>
+            </h3>
+            {% if user.is_authenticated %}
+            <h4 style="margin-left: 80vw;margin-top: -0.5vw;font-size: 1vw;">Welcome back, {{user.username}}!</h4>
+            {% else %}
+            {% endif %}
+            
+        </header>
+        <div id="navbar">
+            <div id="wrapper">
+                    <li class="b"><a href="{% url 'task_list' %}" style="text-decoration: none; color: white;">Dashboard</a></li>
+                    <li class="c"><a href="{% url 'student_list' %}" style="text-decoration: none; color: white;">Students</a></li>
+                    <li class="d"><a class="active" href="{% url 'studentgrades_list' %}" style="text-decoration: none; color: white;">Gradebook</a></li>
+                    <li class="e"><a href="{% url 'logout' %}" style="text-decoration: none; color: white">Sign Out</a></li>
+            </div>
+        </div>
+        <div class="jumbotron pt-3" style="position:absolute;left:12vw;width:75vw;background-color: #f8f8f8;top:7vw;">
+            <h1 style="text-align: center;font-family: 'Raleway', sans-serif;font-weight:bold;">Add Comments + Final Mark</h1>
+            <hr class="my-4">
+        <div>
+        </div>
+{% load crispy_forms_tags %}
+
+ <form action="" method="POST" autocomplete="off">
+     {% csrf_token %}
+     {{form.comments|as_crispy_field}}
+     {{form.final_grade|as_crispy_field}}
+     <div class="col-md-5">
+        <input type="submit" name="Submit" class="btn btn-success btn-block btn-lg">
+    </div>
+</form>
+</div>
+</div>
+
+</body>
+</html>
