@@ -1,7 +1,7 @@
 from django.urls import path
 
 from . import views
-
+#all the urls of the website are stored here
 
 urlpatterns=[
     path('signup/', views.signup, name="signup"),
