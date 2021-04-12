@@ -9,6 +9,7 @@ from django.contrib.auth.decorators import login_required
 from .forms import *
 from .models import *
 
+#all the functions and methods are stored in this file
 #Selina Ou
 #Brings user to the splashpage
 def home(request):
