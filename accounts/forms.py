@@ -3,7 +3,7 @@ from .models import Student,Category,EvidenceRec,Additional,Task,Studentgrades
 from django import forms
 
 from .models import EvidenceRec
-
+#forms that inherit model classes are created here
 
 class StudentForm(ModelForm):
     class Meta:
