@@ -12,6 +12,6 @@ Gradebit is a web based organizational platform and educational resource where t
 
 ## Key Features
 - Pre-made rubric templates
-- Pop-up feedback: when grade bubbles are hovered over, comments and feedback appear
+- Pop-up feedback: comments and feedback appear when grade bubbles are hovered over
 - To-Do List with reminders
 
